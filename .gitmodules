@@ -1,0 +1,3 @@
+[submodule "hbalibs/UtilCode"]
+	path = hbalibs/UtilCode
+	url = git@github.com:AaronHuangGit/UtilCode.git
