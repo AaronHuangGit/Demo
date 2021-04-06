@@ -1,0 +1,25 @@
+plugins {
+    id 'com.android.application'
+    id 'com.hisoybean.android.plugin.HBAPlugin'
+}
+
+HBAConfig {
+    versionCode 1
+    versionName "1.0"
+    applicationId "com.hisoybean.demo"
+    syncWithCleanGradleCache true
+    mavenPublish false
+}
+
+///** 以下设置是因为gradle有缓存机制，而且默认的缓存时间是24 小时，
+// * 所以需要进行如下配置，修改gradle缓存时间为 0 秒，
+// * 来达到SNAPSHOT aar立即生效的效果 */
+//configurations.all {
+////    resolutionStrategy.cacheDynamicVersionsFor 0, 'seconds' // 动态版本,例如 3+，latest.integration
+//    resolutionStrategy.cacheChangingModulesFor 0, 'seconds' // 变化模块
+//}
+
+dependencies {
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    implementation 'com.hisoybean.android:utilcode:1.0.0-SNAPSHOT'
+}
